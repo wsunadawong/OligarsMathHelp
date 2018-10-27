@@ -9,6 +9,8 @@ Created on Fri Oct 26 22:12:57 2018
 from flask import Flask, render_template, request, redirect
 import os
 import requests
+import math
+
 site = Flask(__name__)
 @site.route('/')
 def home():
@@ -26,10 +28,11 @@ def vertex():
 def quadratic():
     if request.method == 'POST':
 	coefficients = request.form
-	a = coefficients["a"]
-	b = coefficients["b"]
-	c = coefficients["c"]
-    	return render_template('Quadratic.html', root = a + " " + b + " " + c)
+	a = int(coefficients["a"])
+	b = int(coefficients["b"])
+	c = int(coefficients["c"])
+	root1 = (-b + math.sqrt(b**2 - 4*a*c))/(2*a)
+    	return render_template('Quadratic.html', root = root1)
     else: 
 	return render_template('Quadratic.html')
 
