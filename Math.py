@@ -14,6 +14,10 @@ site = Flask(__name__)
 def home():
     return render_template('Math.html')
 
+@site.route('/algebra')
+def algebra():
+    return render_template('Algebra.html')
+
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
 	site.run(host="0.0.0.0", port=port, threaded=True)
