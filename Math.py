@@ -28,9 +28,9 @@ def vertex():
 def quadratic():
     if request.method == 'POST':
 	coefficients = request.form
-	a = int(coefficients["a"])
-	b = int(coefficients["b"])
-	c = int(coefficients["c"])
+	a = float(coefficients["a"])
+	b = float(coefficients["b"])
+	c = float(coefficients["c"])
 	if b**2 - 4*a*c < 0:
 		root1 = str(-b/(2*a)) + " + " + str(math.sqrt(4*a*c - b**2)/(2*a)) + "i"
 		root2 = str(-b/(2*a)) + " - " + str(math.sqrt(4*a*c - b**2)/(2*a)) + "i"
