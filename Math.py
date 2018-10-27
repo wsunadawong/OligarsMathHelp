@@ -24,6 +24,10 @@ def algebra():
 def vertex():
     return render_template('Vertex.html')
 
+@site.route('/checkpath')
+def checkpath():
+    return render_template('checkpath.html')
+
 @site.route('/quadratic', methods = ['POST', 'GET'])
 def quadratic():
     if request.method == 'POST':
