@@ -86,6 +86,23 @@ def herons():
     else: 
 	return render_template('herons.html')
 
+@site.route('/crossproduct', methods = ['POST', 'GET'])
+def crossproduct():
+    if request.method == 'POST':
+	coefficients = request.form
+	a = float(coefficients["a"])
+	b = float(coefficients["b"])
+	c = float(coefficients["c"])
+	d = float(coefficients["d"])
+	e = float(coefficients["e"])
+	f = float(coefficients["f"])
+	
+	crossproduct = str((b*f)-(c*e)) + "," str(-1*((a*f)-(c*d))) + "," str(1*((a*e)-(b*d))) 
+
+	return render_template('crossproduct.html', crossproduct = crossproduct)
+    else: 
+	return render_template('crossproduct.html')
+
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
 	site.run(host="0.0.0.0", port=port, threaded=True)
