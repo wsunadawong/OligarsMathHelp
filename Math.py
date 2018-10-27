@@ -58,6 +58,10 @@ def quadratic():
 def geometry():
     return render_template('Geometry.html')
 
+@site.route('/circle')
+def vectors():
+    return render_template('Circle.html')
+
 @site.route('/vectors')
 def vectors():
     return render_template('Vectors.html')
