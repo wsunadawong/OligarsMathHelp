@@ -12,7 +12,7 @@ import requests
 site = Flask(__name__)
 @site.route('/')
 def home():
-    return render_template('Home.html')
+    return render_template('Math.html')
 
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
