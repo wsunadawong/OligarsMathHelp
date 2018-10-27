@@ -10,7 +10,6 @@ from flask import Flask, render_template, request, redirect
 import os
 import requests
 site = Flask(__name__)
-api_url = 'https://api.chess.com/pub/player/The20thDuck'
 @site.route('/')
 def home():
     return render_template('Home.html')
