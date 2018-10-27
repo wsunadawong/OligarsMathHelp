@@ -62,7 +62,7 @@ def geometry():
 def circle():
     if request.method == 'POST':
 	coefficients = request.form
-	r = float(coefficients["r"])
+	r = float(coefficients["radius"])
 	area = math.pi * r**2
     	return render_template('Circle.html', area = area)
     else: 
