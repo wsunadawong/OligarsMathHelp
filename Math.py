@@ -20,7 +20,7 @@ def home():
 def algebra():
     return render_template('Algebra.html')
 
-@site.route('/vertex')
+@site.route('/vertex', methods = ['POST', 'GET'])
 def vertex():
     return render_template('Vertex.html')
 
