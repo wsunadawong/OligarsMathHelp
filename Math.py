@@ -22,7 +22,19 @@ def algebra():
 
 @site.route('/vertex', methods = ['POST', 'GET'])
 def vertex():
-    return render_template('Vertex.html')
+	if request.method == 'POST':
+		coefficients = request.form
+		a = float(coefficients["a"])
+		b = float(coefficients["b"])
+		c = float(coefficients["c"])
+		x = 1
+		y = 2
+		else:
+			root1 = (-b + math.sqrt(b**2 - 4*a*c))/(2*a)
+			root2 = (-b - math.sqrt(b**2 - 4*a*c))/(2*a)
+		return render_template('Vertex.html', x = x, y = y)
+	else: 
+    		return render_template('Vertex.html')
 
 @site.route('/checkpath')
 def checkpath():
