@@ -106,7 +106,7 @@ def crossproduct():
 	e = float(coefficients["e"])
 	f = float(coefficients["f"])
 	
-	crossproduct = str((b*f)-(c*e)) + "," str(-1*((a*f)-(c*d))) + "," str(1*((a*e)-(b*d))) 
+	crossproduct = str((b*f)-(c*e)) + "," + str(-1*((a*f)-(c*d))) + "," + str(1*((a*e)-(b*d))) 
 
 	return render_template('crossproduct.html', crossproduct = crossproduct)
     else: 
