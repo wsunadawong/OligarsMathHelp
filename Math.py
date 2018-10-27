@@ -32,8 +32,8 @@ def quadratic():
 	b = int(coefficients["b"])
 	c = int(coefficients["c"])
 	if b**2 - 4*a*c < 0:
-		root1 = str(-b/(2*a)) + " + " + str(math.sqrt(4*a*c - b**2)) + "i"
-		root2 = str(-b/(2*a)) + " - " + str(math.sqrt(4*a*c - b**2)) + "i"
+		root1 = str(-b/(2*a)) + " + " + str(math.sqrt(4*a*c - b**2)/(2*a)) + "i"
+		root2 = str(-b/(2*a)) + " - " + str(math.sqrt(4*a*c - b**2)/(2*a)) + "i"
 	else:
 		root1 = (-b + math.sqrt(b**2 - 4*a*c))/(2*a)
 		root2 = (-b - math.sqrt(b**2 - 4*a*c))/(2*a)
