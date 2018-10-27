@@ -29,9 +29,6 @@ def vertex():
 		c = float(coefficients["c"])
 		x = 1
 		y = 2
-		else:
-			root1 = (-b + math.sqrt(b**2 - 4*a*c))/(2*a)
-			root2 = (-b - math.sqrt(b**2 - 4*a*c))/(2*a)
 		return render_template('Vertex.html', x = x, y = y)
 	else: 
     		return render_template('Vertex.html')
