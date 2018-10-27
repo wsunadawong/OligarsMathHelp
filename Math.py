@@ -32,7 +32,7 @@ def geometry():
 
 @site.route('/vectors')
 def vectors():
-    return render_template('vectors.html')
+    return render_template('Vectors.html')
 
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
