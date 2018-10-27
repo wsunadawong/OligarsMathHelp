@@ -66,7 +66,19 @@ def quadratic():
     else: 
 	return render_template('Dot.html')
 
-
+@site.route('/herons', methods = ['POST', 'GET'])
+def herons():
+    if request.method == 'POST':
+	coefficients = request.form
+	a = float(coefficients["a"])
+	b = float(coefficients["b"])
+	c = float(coefficients["c"])
+	
+		area = (math.sqrt(((a+b+c)/2)*(((a+b+c)/2)-a)*(((a+b+c)/2)-b)*(((a+b+c)/2)-c)))
+		
+    	return render_template('herons.html', area = area)
+    else: 
+	return render_template('herons.html')
 
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
