@@ -28,7 +28,7 @@ def quadratic():
 
 @site.route('/geometry')
 def geometry():
-    return render_template('geometry.html')
+    return render_template('Geometry.html')
 
 @site.route('/vectors')
 def vectors():
