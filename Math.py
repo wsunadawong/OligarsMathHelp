@@ -24,7 +24,7 @@ def vertex():
 
 @site.route('/quadratic', methods = ['POST', 'GET'])
 def quadratic():
-    return render_template('Quadratic.html')
+    return render_template('Quadratic.html', root = "Hello")
 
 @site.route('/geometry')
 def geometry():
