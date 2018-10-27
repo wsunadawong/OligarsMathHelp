@@ -53,6 +53,10 @@ def vectors():
 def vectors():
     return render_template('Dot.html')
 
+@site.route('/herons')
+def herons():
+    return render_template('herons.html')
+
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
 	site.run(host="0.0.0.0", port=port, threaded=True)
