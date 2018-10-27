@@ -19,7 +19,7 @@ def algebra():
     return render_template('Algebra.html')
 
 @site.route('/vertex')
-def algebra():
+def vertex():
     return render_template('Vertex.html')
 
 
