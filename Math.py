@@ -108,7 +108,7 @@ def herons():
 		return render_template('herons.html', area = area, color = "Green")
     	
     else: 
-	return render_template('herons.html')
+	return render_template('herons.html', color = "Green")
 
 @site.route('/crossproduct', methods = ['POST', 'GET'])
 def crossproduct():
