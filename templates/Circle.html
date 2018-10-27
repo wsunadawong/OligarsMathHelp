@@ -4,7 +4,7 @@
 	<style>
 body {
   height: 100%;
-  background: linear-gradient(to left top, Plum, Wheat) fixed;
+  background: linear-gradient(to left top, LightCyan, LightGreen) fixed;
 }
 </style>
 <center>
@@ -15,21 +15,17 @@ body {
 	<body>
 		
 <nav class="w3-bar w3-white">
-  <a href=vectors class="w3-button w3-bar-item">Back</a>
+  <a href=geometry class="w3-button w3-bar-item">Back</a>
 </nav>
 		
-		<h1>Dot Product Finder</h1>
-		<h2>Dot Product = (a,b,c) . (d,e,f) Enter a,b,c,d,e,f
+		<h1>Area of Circle Finder</h1>
+		<h2>
 		<form action = 'dot' method = 'POST'>
-			<p> a: <input type = 'text' name = 'a'> </p>
-			<p> b: <input type = 'text' name = 'b'> </p>
-			<p> c: <input type = 'text' name = 'c'> </p>
-      <p> d: <input type = 'text' name = 'd'> </p>
-      <p> e: <input type = 'text' name = 'e'> </p>
-      <p> f: <input type = 'text' name = 'f'> </p>
+			<p> radius: <input type = 'text' name = 'r'> </p>
+
 		<input type="submit" value="Submit">
 		</form>
-		<p> dot product = {{dotproduct}} </p>
+		<p> area = {{area}} </p>
 	</body>
 </center>
 </html>
