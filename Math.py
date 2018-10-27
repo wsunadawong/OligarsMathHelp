@@ -50,9 +50,9 @@ def vectors():
     return render_template('Vectors.html')
 
 
-'''
+
 @site.route('/dot', methods = ['POST', 'GET'])
-def quadratic():
+def dot():
     if request.method == 'POST':
 	coefficients = request.form
 	a = float(coefficients["a"])
@@ -67,7 +67,7 @@ def quadratic():
 	return render_template('Dot.html', dotproduct = dotproduct)
     else: 
 	return render_template('Dot.html')
-'''
+
 
 @site.route('/herons', methods = ['POST', 'GET'])
 def herons():
