@@ -49,9 +49,22 @@ def geometry():
 def vectors():
     return render_template('Vectors.html')
 
-@site.route('/dot')
-def vectors():
-    return render_template('Dot.html')
+@site.route('/dot', methods = ['POST', 'GET'])
+def quadratic():
+    if request.method == 'POST':
+	coefficients = request.form
+	a = float(coefficients["a"])
+	b = float(coefficients["b"])
+	c = float(coefficients["c"])
+	d = float(coefficients["d"])
+	e = float(coefficients["e"])
+	f = float(coefficients["f"])
+	
+		dotproduct =(a*b) + (c*d) + (e*f)
+    	
+	return render_template('Dot.html', dotproduct = dotproduct)
+    else: 
+	return render_template('Dot.html')
 
 @site.route('/herons')
 def herons():
