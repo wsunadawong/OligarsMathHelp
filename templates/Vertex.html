@@ -1,7 +1,35 @@
-<!DOCTYPE html>
 <html>
+<head>
+<style>
+body {
+  height: 100%;
+  background: linear-gradient(to left top, Plum, PaleVioletRed) fixed;
+}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<center>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <body>
 
-hi warren
-</body>
+<nav class="w3-bar w3-white">
+  <a href=algebra class="w3-button w3-bar-item">Back</a>
+</nav>
+	
+	<body>
+		
+		<h1>Vertex Finder</h1>
+		<h2>y = ax^2 + bx + c. Enter a, b, c </h2>
+		<form action = 'vertex' method = 'POST'>
+			<p> a?: <input type = 'text' name = 'a'> </p>
+			<p> b?: <input type = 'text' name = 'b'> </p>
+			<p> c?: <input type = 'text' name = 'c'> </p>
+		<input type="submit" value="Submit">
+		</form>
+		<p> vertex = ({{root1}}, {{root2}}) </p>
+	</body>
+</center>
 </html>
