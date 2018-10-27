@@ -62,7 +62,7 @@ def dot():
 	e = float(coefficients["e"])
 	f = float(coefficients["f"])
 	
-	dotproduct =(a*b) + (c*d) + (e*f)
+	dotproduct =(a*d) + (b*e) + (c*f)
 
 	return render_template('Dot.html', dotproduct = dotproduct)
     else: 
