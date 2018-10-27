@@ -58,9 +58,15 @@ def quadratic():
 def geometry():
     return render_template('Geometry.html')
 
-@site.route('/circle')
+@site.route('/circle', methods = ['POST', 'GET'])
 def circle():
-    return render_template('Circle.html')
+    if request.method == 'POST':
+	coefficients = request.form
+	r = float(coefficients["r"])
+	area = math.pi * r**2
+    	return render_template('Circle.html', area = area)
+    else: 
+	return render_template('Circle.html')
 
 @site.route('/vectors')
 def vectors():
