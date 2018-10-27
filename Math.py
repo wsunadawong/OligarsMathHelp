@@ -99,7 +99,10 @@ def herons():
 	a = float(coefficients["a"])
 	b = float(coefficients["b"])
 	c = float(coefficients["c"])
-	area = (math.sqrt(((a+b+c)/2)*(((a+b+c)/2)-a)*(((a+b+c)/2)-b)*(((a+b+c)/2)-c)))
+	if a+b<c or a+c<b or c+b<a:
+		area = "Fake triangle"
+	else:
+		area = (math.sqrt(((a+b+c)/2)*(((a+b+c)/2)-a)*(((a+b+c)/2)-b)*(((a+b+c)/2)-c)))
 		
     	return render_template('herons.html', area = area)
     else: 
