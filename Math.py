@@ -22,7 +22,7 @@ def algebra():
 def vertex():
     return render_template('Vertex.html')
 
-@site.route('/quadratic')
+@site.route('/quadratic', methods = ['POST', 'GET'])
 def quadratic():
     return render_template('Quadratic.html')
 
