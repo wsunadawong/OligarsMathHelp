@@ -49,6 +49,10 @@ def geometry():
 def vectors():
     return render_template('Vectors.html')
 
+@site.route('/dot')
+def vectors():
+    return render_template('Dot.html')
+
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
 	site.run(host="0.0.0.0", port=port, threaded=True)
