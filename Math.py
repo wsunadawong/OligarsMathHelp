@@ -22,6 +22,10 @@ def algebra():
 def vertex():
     return render_template('Vertex.html')
 
+@site.route('/quadratic')
+def quadratic():
+    return render_template('Quadratic.html')
+
 
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
