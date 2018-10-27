@@ -27,8 +27,8 @@ def vertex():
 		a = float(coefficients["a"])
 		b = float(coefficients["b"])
 		c = float(coefficients["c"])
-		x = 1
-		y = 2
+		x = -b/(2*a)
+		y = b**2/(4*a**2) - c
 		return render_template('Vertex.html', x = x, y = y)
 	else: 
     		return render_template('Vertex.html')
