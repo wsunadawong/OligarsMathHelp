@@ -32,7 +32,8 @@ def quadratic():
 	b = int(coefficients["b"])
 	c = int(coefficients["c"])
 	root1 = (-b + math.sqrt(b**2 - 4*a*c))/(2*a)
-    	return render_template('Quadratic.html', root = root1)
+	root2 = (-b - math.sqrt(b**2 - 4*a*c))/(2*a)
+    	return render_template('Quadratic.html', root1 = root1, root2 = root2)
     else: 
 	return render_template('Quadratic.html')
 
