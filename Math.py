@@ -66,9 +66,7 @@ def quadratic():
     else: 
 	return render_template('Dot.html')
 
-@site.route('/herons')
-def herons():
-    return render_template('herons.html')
+
 
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
