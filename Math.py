@@ -26,6 +26,13 @@ def vertex():
 def quadratic():
     return render_template('Quadratic.html')
 
+@site.route('/geometry')
+def geometry():
+    return render_template('geometry.html')
+
+@site.route('/herons')
+def herons():
+    return render_template('herons.html')
 
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
